@@ -1,0 +1,11 @@
+---
+layout: post
+title: 'Reminder'
+author: Minh
+permalink: /reminder
+---
+
+# **Monday, 27-12-2021**
+
+- [ ] Job 1
+- [ ] Job 2
