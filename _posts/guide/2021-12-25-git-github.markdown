@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Git and Github Guide
+permalink: /git-github-guide
 background: 'https://cafedev.vn/wp-content/uploads/2021/01/cafedev-git-vs-github.png'
 ---
 
