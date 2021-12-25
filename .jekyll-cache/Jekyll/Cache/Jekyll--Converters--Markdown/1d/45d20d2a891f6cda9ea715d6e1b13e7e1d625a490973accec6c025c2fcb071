@@ -1,0 +1,12 @@
+I"®<div class="about-us-container">
+  <div class="Header">
+    <h1>Our team</h1>
+  </div>
+  <div class="about-us-teams">
+    &lt;img src="https://cdn-icons-png.flaticon.com/512/145/145867.png" height=&gt;
+    <div class="about-us-name">Minh Quach Hoang</div>
+    <div class="about-us-design">Developer and Researcher</div>
+    <div class="about-us-about">Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
+  </div>
+</div>
+:ET

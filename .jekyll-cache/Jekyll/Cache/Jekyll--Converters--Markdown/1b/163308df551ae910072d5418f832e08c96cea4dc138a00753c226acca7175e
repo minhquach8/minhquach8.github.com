@@ -1,0 +1,9 @@
+I"�<div id="calendar">
+</div>
+
+<p>$(document).ready(function() {
+    $(‘#calendar’).evoCalendar({
+        settingName: settingValue
+    })
+})</p>
+:ET

@@ -1,0 +1,63 @@
+I"ù	<div class="container">
+		<!-- <div class="nav"> -->
+			<div class="logo">YourLogo</div>
+		<div>
+			<span>Product</span>
+			<span class="active">About Us</span>
+			<span>Contact Us</span>
+		</div>
+		</div>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>	&lt;div class="about-us"&gt;
+		&lt;div class="who-we-are"&gt;
+			&lt;h3&gt;Who we are&lt;/h3&gt;
+			&lt;span&gt;orem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy&lt;/span&gt;
+		&lt;/div&gt;
+		&lt;div class="cards"&gt;
+			&lt;div class="card"&gt;
+				&lt;div class="card-img card-img1"&gt;&lt;/div&gt;
+				&lt;div class="card-body"&gt;
+					&lt;h3&gt;Havy Ruiz&lt;/h3&gt;
+					&lt;span&gt;Web developer&lt;/span&gt;
+					&lt;p&gt;orem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy&lt;/p&gt;
+				&lt;/div&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+		&lt;div class="card"&gt;
+				&lt;div class="card-img card-img2"&gt;&lt;/div&gt;
+				&lt;card class="card-body"&gt;
+					&lt;h3&gt;Havy Ruiz&lt;/h3&gt;
+					&lt;span&gt;Web developer&lt;/span&gt;
+					&lt;p&gt;orem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy&lt;/p&gt;
+				&lt;/card&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+		&lt;div class="card"&gt;
+				&lt;div class="card-img card-img3"&gt;&lt;/div&gt;
+				&lt;card class="card-body"&gt;
+					&lt;h3&gt;Havy Ruiz&lt;/h3&gt;
+					&lt;span&gt;Web developer&lt;/span&gt;
+					&lt;p&gt;orem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy&lt;/p&gt;
+				&lt;/card&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+		&lt;div class="card"&gt;
+				&lt;div class="card-img card-img4"&gt;&lt;/div&gt;
+				&lt;card class="card-body"&gt;
+					&lt;h3&gt;Havy Ruiz&lt;/h3&gt;
+					&lt;span&gt;Web developer&lt;/span&gt;
+					&lt;p&gt;orem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy&lt;/p&gt;
+				&lt;/card&gt;
+			&lt;/div&gt;
+	&lt;/div&gt;
+		
+	&lt;/div&gt;
+
+&lt;div class="social-media"&gt;
+			&lt;i class="fa fa-github" style="font-size:24px"&gt;&lt;/i&gt;
+		&lt;i class="fa fa-linkedin" style="font-size:24px"&gt;&lt;/i&gt;
+	&lt;i class="fa fa-twitter" style="font-size:24px"&gt;&lt;/i&gt;
+	&lt;i class="fa fa-facebook" style="font-size:24px"&gt;&lt;/i&gt;
+		&lt;/div&gt;
+&lt;/div&gt;
+</code></pre></div></div>
+:ET

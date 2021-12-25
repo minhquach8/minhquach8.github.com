@@ -1,0 +1,10 @@
+I"š<div id="calendar">
+</div>
+
+<script>$(document).ready(function() {
+    $('#calendar').evoCalendar({
+        settingName: settingValue
+    })
+})</script>
+
+:ET
