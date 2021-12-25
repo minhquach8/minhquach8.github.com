@@ -5,4 +5,6 @@ subtitle: Main milestones in our project
 background: '/img/bg-index.jpg'
 ---
 
-![Roadmap](/img/posts/roadmap.png)
+<div class="zoom">
+  <img src="/img/posts/roadmap.png">
+</div>

@@ -18,7 +18,6 @@ h3.post-subtitle {
 .post-preview {
 	> a {
 		color: $gray-900;
-
 		&:focus,
 		&:hover {
 			text-decoration: none;
@@ -173,4 +172,17 @@ pre > code {
 	/*  When the mouse hovers over the small button  */
 	background: #0085a1; /*  The background color of the small button  */
 	color: #fff; /*  Text color  */
+}
+
+.zoom {
+	padding: 50px;
+	transition: transform 0.2s; /* Animation */
+	width: 100%;
+	margin: 0 auto;
+}
+
+.zoom:hover {
+	transform: scale(
+		1.8
+	); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
 }
