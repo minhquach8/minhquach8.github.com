@@ -1,6 +1,6 @@
 // Global styling for this template
 body {
-	font-size: 20px;
+	font-size: 16px;
 	color: $gray-900;
 }
 
@@ -9,7 +9,7 @@ p {
 	margin: 30px 0;
 
 	a {
-		text-decoration: underline;
+		text-decoration: none;
 	}
 }
 
@@ -22,8 +22,17 @@ h6 {
 	font-weight: 800;
 }
 
+a > h1,
+a > h2,
+a > h3,
+a > h4,
+a > h5,
+a > h6 {
+	color: #000;
+}
+
 a {
-	color: $gray-900;
+	color: #5286d4;
 
 	&:focus,
 	&:hover {
