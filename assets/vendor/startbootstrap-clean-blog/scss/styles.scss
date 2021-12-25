@@ -1,18 +1,21 @@
 // Import variables
-@import "./variables";
+@import './variables';
+
+// Import dark mode
+@import './darkmode';
 
 // Import Bootstrap
-@import "../../bootstrap/scss/bootstrap";
+@import '../../bootstrap/scss/bootstrap';
 
 // Global CSS
-@import "./global";
+@import './global';
 
 // Components
-@import "./components/buttons";
-@import "./components/navbar";
+@import './components/buttons';
+@import './components/navbar';
 
 // Sections
-@import "./sections/contact";
-@import "./sections/footer";
-@import "./sections/masthead";
-@import "./sections/post";
+@import './sections/contact';
+@import './sections/footer';
+@import './sections/masthead';
+@import './sections/post';

@@ -2,7 +2,20 @@
 html {
 	scroll-behavior: smooth;
 }
-.post-uuview {
+
+.nav-item > a.nav-link:hover {
+	color: blue;
+}
+
+h2.post-title:hover {
+	color: #0085a1;
+}
+
+h3.post-subtitle {
+	cursor: default;
+}
+
+.post-preview {
 	> a {
 		color: $gray-900;
 

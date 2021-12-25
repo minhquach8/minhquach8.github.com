@@ -2,6 +2,7 @@
 body {
 	font-size: 16px;
 	color: $gray-900;
+	// transition: background 1s ease-in, color 1s ease-in;
 }
 
 p {
@@ -27,8 +28,13 @@ a > h2,
 a > h3,
 a > h4,
 a > h5,
-a > h6 {
+a > h6,
+a > .fa-stack {
 	color: #000;
+}
+
+a > .fa-stack:hover {
+	color: #0085a1;
 }
 
 a {
@@ -36,6 +42,7 @@ a {
 
 	&:focus,
 	&:hover {
+		text-decoration: none;
 		color: $primary;
 	}
 }
