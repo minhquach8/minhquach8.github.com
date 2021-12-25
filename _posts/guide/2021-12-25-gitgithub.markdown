@@ -3,6 +3,7 @@ layout: post
 title: Git and Github Guide
 permalink: /git-github-guide
 background: 'https://cafedev.vn/wp-content/uploads/2021/01/cafedev-git-vs-github.png'
+date: 2021-12-25
 ---
 
 # Basic Git and Github Guide
