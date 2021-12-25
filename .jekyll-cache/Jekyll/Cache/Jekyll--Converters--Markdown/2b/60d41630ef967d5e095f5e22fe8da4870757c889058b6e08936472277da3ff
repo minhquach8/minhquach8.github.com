@@ -1,9 +1,0 @@
-I"<h1 id="basic-git-and-github-guide">Basic Git and Github Guide</h1>
-
-<p><img src="http://d1jnx9ba8s6j9r.cloudfront.net/blog/wp-content/uploads/2017/12/git-vs-github4.png" alt="GitandGithub" /></p>
-
-<blockquote>
-  <p><strong>📘</strong> Git and Github
-A quick aside: <em>git</em> and <em>Github</em> are <strong>not</strong> the same things. Git is an open-source, version control tool created in 2005 by developers working on the Linux OS; Github is a company founded in 2008 that makes tools which integrate with git. You do not need Github to use git, but you cannot use Github without using git. There are many other alternatives to Github, such as GitLab, BitBucket,… You do not need to use a remote to use git, but it will make sharing your code with others easier.</p>
-</blockquote>
-:ET
