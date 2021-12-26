@@ -6,6 +6,7 @@ if (check === 'enabled') {
 		format: 'mm/dd/yyyy',
 		titleFormat: 'MM yyyy',
 		eventHeaderFormat: 'DD, M d yyyy',
+		todayHighlight: true,
 	});
 	state = 'Midnight Blue';
 } else {
@@ -14,6 +15,7 @@ if (check === 'enabled') {
 		format: 'mm/dd/yyyy',
 		titleFormat: 'MM yyyy',
 		eventHeaderFormat: 'DD, M d yyyy',
+		todayHighlight: true,
 	});
 	state = 'Royal Navy';
 }
