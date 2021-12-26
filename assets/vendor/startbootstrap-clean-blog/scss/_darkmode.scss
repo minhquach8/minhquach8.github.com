@@ -1,4 +1,4 @@
-body.active {
+.active {
 	color: #fff;
 	background: #2b2c42;
 
@@ -62,7 +62,9 @@ body.active {
 	}
 
 	// About us Page
-	h3.user-name, .profile h5, .profile p{
+	h3.user-name,
+	.profile h5,
+	.profile p {
 		color: #fff;
 	}
 }

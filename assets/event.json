@@ -1,0 +1,58 @@
+{
+	"myEvents": [
+		{
+			"id": "1",
+			"name": "O0500- Software Architecture",
+			"badge": "9:00 - 10:30",
+			"date": "December/27/2021",
+			"type": "event"
+		},
+		{
+			"id": "2",
+			"name": "Research algorithms",
+			"badge": "10:30 - 11:30",
+			"date": "December/27/2021",
+			"type": "event"
+		},
+		{
+			"id": "3",
+			"name": "Research algorithms",
+			"badge": "Individual",
+			"date": "December/28/2021",
+			"type": "event"
+		},
+		{
+			"id": "4",
+			"name": "Research algorithms",
+			"badge": "Individual",
+			"date": "December/29/2021",
+			"type": "event"
+		},
+		{
+			"id": "5",
+			"name": "Control Flow Diagram",
+			"badge": "9:00 - 10:30",
+			"date": "December/30/2021",
+			"type": "event"
+		},
+		{
+			"id": "6",
+			"name": "O0500- Software Architecture",
+			"badge": "9:00 - 10:30",
+			"date": "December/30/2021",
+			"type": "event"
+		},
+		{
+			"id": "7",
+			"name": "Office 🏢",
+			"date": "December/31/2021",
+			"type": "event"
+		},
+		{
+			"id": "8",
+			"name": "Happy New Year 🎉",
+			"date": "January/1/2022",
+			"type": "holiday"
+		}
+	]
+}
