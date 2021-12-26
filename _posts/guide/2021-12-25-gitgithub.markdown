@@ -31,7 +31,7 @@ date: 2021-12-25
 > **📘** Git and GitHub
 > A quick aside: _git_ and _GitHub_ are **not** the same things. Git is an open-source, version control tool created in 2005 by developers working on the Linux OS; GitHub is a company founded in 2008 that makes tools which integrate with git. You do not need GitHub to use git, but you cannot use GitHub without using git. There are many other alternatives to GitHub, such as GitLab, BitBucket,... You do not need to use a remote to use git, but it will make sharing your code with others easier.
 
-## Step 1: Create a local git repository <a name="step1"></a>
+# Step 1: Create a local git repository <a name="step1"></a>
 
 When creating new project on your local machine using git, you'll first create a new repositori (repo). To begin, open up a terminal and move to where you want to place the project on you local machine. Then, run init command:
 
@@ -42,7 +42,7 @@ name@ubuntu:~$ cd myproject/
 name@ubuntu:~$ git init
 ```
 
-## Step 2: Add a new file to the repository <a name="step2"></a>
+# Step 2: Add a new file to the repository <a name="step2"></a>
 
 Go ahead and add some files in the folder. Once you have added or modified files in a folder containing a git repoo, git will notice that the file exists inside the repo. But, git won't track the file unless you explicitly tell it to. Git only saves/manages changes to files that it tracks, so we will need to send a command to confirm that yes, want git to track our new file.
 
@@ -66,7 +66,7 @@ name@ubuntu:~$ git status
 > A _**commit**_ is a record of what changes you have made since the last time you made a commit. Commits make up the essence of your project and allow you to jump to the state of a project at any other commit. So, how do you tell git which files to put into a commit? This is where the staging environment or index come in. In Step 2, when you make changes to your repo, git notices that a file has changed but won't do anything with it.<br>
 > To add a file to a commit, you first need to add it to the staging environment. To do this, you can use the _git add < filename >_ command. One you've used git add command to add all the files you want to the staging environment, you can then tell git to package them into a commit using the _git commit_ command.
 
-## Step 3: Add a file to the staging environment <a name="step3"></a>
+# Step 3: Add a file to the staging environment <a name="step3"></a>
 
 Add a file to the staging environment using the git add command. if you rerun the git status command you will see that git has added the file to the staging environment.
 
@@ -86,7 +86,7 @@ or _git add ._ to add all your files to the staging environment.
 name@ubuntu:~$ git add .
 ```
 
-## Step 4: Create a commit <a name="step4"></a>
+# Step 4: Create a commit <a name="step4"></a>
 
 Run the command _git commit -m "your message"_. The message at the end of the commit should be something related to what the commit contains - maybe it's a new feature, maybe it's a bug fix, maybe it's just fixing a typo. Commits live forever in a repository (technically you can delete them if you really, really need to but it’s messy), so if you leave a clear explanation of your changes it can be extremely helpful for future programmers (perhaps future you!) who are trying to figure out why some change was made years later.
 
@@ -96,7 +96,7 @@ Run the command _git commit -m "your message"_. The message at the end of the co
 name@ubuntu:~$ git commit -m "my first commit"
 ```
 
-## Step 5: Create a new branch <a name="step5"></a>
+# Step 5: Create a new branch <a name="step5"></a>
 
 Say you want to make a new feature but are worried about making changes to the main project while developing the feature. This is where _git branches_ come in.
 
@@ -123,7 +123,7 @@ name@ubuntu:~$ git branch
 > By default, every git repository’s first branch is named **master** (and is typically used as the primary branch in the project). As part of the tech industry’s general anti-racism work, some groups have begun to use alternate names for the default branch (we are using “primary” in this tutorial, for example). In other documentation and discussions, you may see “master”, or other terms, used to refer to the primary branch. Regardless of the name, just keep in mind that nearly every repository has a primary branch that can be thought of as the official version of the repository. If it’s a website, then the primary branch is the version that users see. If it’s an application, then the primary branch is the version that users download. This isn’t technically necessary (git doesn’t treat any branches differently from other branches), but it’s how git is traditionally used in a project. <br>
 > Now, if you switch back to the primary branch and make some more commits, your new branch won't see any of those changes until you _merge_ those changes onto your new branch.
 
-## Step 6: Create a new repository on GitHub <a name="step6"></a>
+# Step 6: Create a new repository on GitHub <a name="step6"></a>
 
 If you only want to keep track of your code locally, you don't need to use GitHub. But if you want to work with a team, you can use GitHub to collaboratively modify the project's code.
 
@@ -140,7 +140,7 @@ GitHub will ask if you want to create a new repo from scratch or if you want to 
 name@ubuntu:~$ git remote add origin https://github.com/<username>/<yourreponame>.git
 ```
 
-## Step 7: Push a branch to GitHub <a name="step7"></a>
+# Step 7: Push a branch to GitHub <a name="step7"></a>
 
 Now we'll push the commit in your branch to your new GitHub repo. This allows other people to see the changes you've made. If they're approved by the repository's owner, the changes can then be merged into the primary branch.
 
@@ -156,7 +156,7 @@ You might be wondering what that "origin" word means in the command above. What 
 
 _(If this is your first time using GitHub locally, it might prompt you to log in with your GitHub username and password.)_
 
-## Step 8: Create a pull request <a name="step8"></a>
+# Step 8: Create a pull request <a name="step8"></a>
 
 A pull request (or PR) is a way to alert a repo's owners that you want to make some changes to their code. It allows them to review the code and make sure it looks good before putting your changes on the primary branch.
 
@@ -170,7 +170,7 @@ You might see a big green button at the bottom that says 'Merge pull request'. C
 
 Sometimes you'll be a co-owner or the sole owner of a repo, in which case you may not need to create a PR to merge your changes. However, it's still a good idea to make one so you can keep a more complete history of your updates and to make sure you always create a new branch when making changes.
 
-## Step 9: Merge a PR
+# Step 9: Merge a PR
 
 Go ahead and click the green 'Merge pull request' button. This will merge your changes into the primary branch.
 ![](https://product.hubspot.com/hs-fs/hubfs/Git_6.png?width=600&name=Git_6.png)
@@ -185,7 +185,7 @@ This will show you a list of all the commits in that branch. You can see the one
 
 You can also see the hash code of the commit on the right hand side. A hash code is a unique identifier for that specific commit. It is useful for referring to specific commits and when undoing changes (use the _git revert <br>< hash code number >_ command to backtrack).
 
-## Step 10: Get changes on GitHub back to your computer <a name="step10"></a>
+# Step 10: Get changes on GitHub back to your computer <a name="step10"></a>
 
 Right now, the repo on GitHub looks a little different than what you have on your local machine. For example, the commit you made in your branch and merged into the primary branch doesn't exist in the primary branch on your local machine.
 
@@ -203,7 +203,7 @@ Now we can use the _git log_ command again to see all new commits.
 
 (You may need to switch branches back to the primary branch. You can do that using the git checkout master command.)
 
-## Step 11: Bask in your git glory <a name="step11"></a>
+# Step 11: Bask in your git glory <a name="step11"></a>
 
 You've successfully made a PR and merged your code to the primary branch. Congratulations! If you'd like to dive deeper, check out these more advanced tutorials and resources:
 

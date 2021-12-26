@@ -1,0 +1,491 @@
+I"y�<blockquote>
+  <p>Jekyll is a static site generator. It takes text written in your favorite
+markup language and uses layouts to create a static website. You can tweak the
+site’s look and feel, URLs, the data displayed on the page, and more.</p>
+</blockquote>
+
+<h4 id="table-of-contents">Table of Contents:</h4>
+
+<ol>
+  <li><a href="#section1">What is Jekyll?</a></li>
+  <li><a href="#section2">What does Jekyll do?</a></li>
+</ol>
+
+<h1 id="what-is-jekyll-">What is Jekyll? <a name="section1"></a></h1>
+
+<p>Jekyll is a parsing engine bundled as a ruby gem used to build static websites from dynamic components such as templates, partials, liquid code, markdown, etc. Jekyll is known as “a simple, blog aware, static site generator”.
+<img src="https://camo.githubusercontent.com/60e48134345384c400adf3a210d1968644e387e0b6a64f5abca97b8340d02a87/687474703a2f2f692e696d6775722e636f6d2f576558466b576e2e6a7067" alt="Jekyll example" /></p>
+
+<h1 id="what-does-jekyll-do-">What does Jekyll do? <a name="section2"></a></h1>
+
+<p>Jekyll is installed as a ruby gem local computer. Once installed you can call jekyll serve in the terminal in a directory and provided that directory is setup in a way jekyll expects, it will do magic stuff like parse markdown/textile files, compute categories, tags, permalinks, and construct your pages from layout templates and partials.</p>
+
+<p>Once parsed, Jekyll stores the result in a self-contained static _site folder. The intention here is that you can serve all contents in this folder statically from a plain static web-server.</p>
+
+<p>You can think of Jekyll as a normalish dynamic blog but rather than parsing content, templates, and tags on each request, Jekyll does this once beforehand and caches the entire website in a folder for serving statically.</p>
+
+<h1 id="jekyll-is-not-blogging-software">Jekyll is Not Blogging Software.<a name="section3"></a></h1>
+
+<p><strong>Jekyll is a parsing engine.</strong></p>
+
+<p>Jekyll does not come with any content nor does it have any templates or design elements. This is a common source of confusion when getting started. Jekyll does not come with anything you actually use or see on your website - you have to make it.</p>
+
+<h1 id="why-should-i-use-jekyll-">Why should I use Jekyll? <a name="section4"></a></h1>
+
+<p>Jekyll is very minimalistic and very efficient. The most important thing to realize about Jekyll is that it creates a static representation of your website requiring only a static web-server. Traditional dynamic blogs like Wordpress require a database and server-side code. Heavily trafficked dynamic blogs must employ a caching layer that ultimately performs the same job Jekyll sets out to do; serve static content.</p>
+
+<p>Therefore if you like to keep things simple and you prefer the command-line over an admin panel UI then give Jekyll a try.</p>
+
+<p><strong>Developers like Jekyll because we can write content like we write code:</strong></p>
+
+<ul>
+  <li>Ability to write content in markdown or textile in your favorite text-editor.</li>
+  <li>Ability to write and preview your content via localhost.</li>
+  <li>No internet connection required.</li>
+  <li>Ability to publish via git.</li>
+  <li>Ability to host your blog on a static web-server.</li>
+  <li>Ability to host freely on GitHub Pages.</li>
+  <li>No database required.</li>
+</ul>
+
+<h1 id="installation-">Installation <a name="section5"></a></h1>
+
+<p>First you need to install ruby on your machine. You can download it from this <a href="https://github.com/oneclick/rubyinstaller2/releases/download/RubyInstaller-2.7.0-1/rubyinstaller-devkit-2.7.0-1-x64.exe">site</a> for (x64) and <a href="https://github.com/oneclick/rubyinstaller2/releases/download/RubyInstaller-2.7.0-1/rubyinstaller-devkit-2.7.0-1-x86.exe">site</a> for (x86) (These sites are for Windows).</p>
+
+<p>You can follow this video. Do not worry if the terminal shows error, just make sure that you follow the steps in video carefully and you can check the version successfully then it is good to go.</p>
+
+<center>
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/LfP7Y9Ja6Qc?start=42" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+</center>
+
+<p>After successfully installing, you can create your blog by typing 03 commnands below sequentially.</p>
+
+<ul>
+  <li>Create a new Jekyll site at <em>./myblog</em></li>
+</ul>
+
+<div class="code-header">
+	<button class="copy-code-button" aria-label="Copy code to clipboard"></button>
+</div>
+
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="go">jekyll new myblog
+</span></code></pre></div></div>
+
+<ul>
+  <li>Change into your new directory</li>
+</ul>
+
+<div class="code-header">
+	<button class="copy-code-button" aria-label="Copy code to clipboard"></button>
+</div>
+
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="go">cd myblog
+</span></code></pre></div></div>
+
+<ul>
+  <li>Build the site and make it available on a local server.</li>
+</ul>
+
+<div class="code-header">
+	<button class="copy-code-button" aria-label="Copy code to clipboard"></button>
+</div>
+
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="go">bundle exec jekyll serve
+</span></code></pre></div></div>
+
+<p>If you reach this step, and when you type on your browser <em>localhost:4000</em>, your browser shows up like image below then <strong>Congrats</strong>. You installed successfully!
+<img src="https://docs.meca.in.th/assets/quickstartresult.jpg" alt="localhost:4000" /></p>
+
+<p>Now, let’s explain what each folder in your Jekyll Blog does.</p>
+
+<h1 id="how-jekyll-works">How Jekyll works:</h1>
+
+<p>Jekyll expects your website directory to be laid out like so:</p>
+
+<p><img src="/img/posts/jekyllguide/folder-structure.JPG" style="width: 40%; display: block; margin-left: auto; margin-right: auto;" alt="" /></p>
+
+<p><strong>_config.yml</strong> Stores configuration data.</p>
+
+<p><strong>_includes</strong> This folder is for partial views.</p>
+
+<p><strong>_layouts</strong> This folder is for the main templates your content will be inserted into. You can have different layouts for different pages or page sections.</p>
+
+<p><strong>_posts</strong> This folder contains your dynamic content/posts. the naming format is required to be @YEAR-MONTH-DATE-title.MARKUP@.</p>
+
+<p><strong>_site</strong> This is where the generated site will be placed once Jekyll is done transforming it.</p>
+
+<p><strong>assets</strong> This folder is not part of the standard jekyll structure. The assets folder represents any generic folder you happen to create in your root directory. Directories and files not properly formatted for jekyll will be left untouched for you to serve normally.</p>
+
+<p>(read more: <a href="http://jekyllrb.com/docs/usage/" target="_blank">http://jekyllrb.com/docs/usage/</a>)</p>
+
+<p><strong>Jekyll Configuration</strong>
+Jekyll supports various configuration options that are fully outlined here: <a href="http://jekyllrb.com/docs/configuration/" target="_blank">http://jekyllrb.com/docs/configuration/</a></p>
+
+<h1 id="content-in-jekyll">Content in Jekyll</h1>
+
+<p>Content in Jekyll is either a post or a page. These content “objects” get inserted into one or more templates to build the final output for its respective static-page.</p>
+
+<p><strong>Posts and Pages</strong>
+Both posts and pages should be written in markdown, textile, or HTML and may also contain Liquid templating syntax. Both posts and pages can have meta-data assigned on a per-page basis such as title, url path, as well as arbitrary custom meta-data.</p>
+
+<p><strong>Working With Posts</strong></p>
+
+<p><strong>Creating a Post</strong>
+Posts are created by properly formatting a file and placing it the _posts folder.</p>
+
+<p><strong>Formatting</strong>
+A post must have a valid filename in the form YEAR-MONTH-DATE-title.MARKUP and be placed in the _posts directory. If the data format is invalid Jekyll will not recognize the file as a post. The date and title are automatically parsed from the filename of the post file. Additionally, each file must have YAML Front-Matter prepended to its content. YAML Front-Matter is a valid YAML syntax specifying meta-data for the given file.</p>
+
+<p><strong>Order</strong>
+Ordering is an important part of Jekyll but it is hard to specify a custom ordering strategy. Only reverse chronological and chronological ordering is supported in Jekyll.</p>
+
+<p>Since the date is hard-coded into the filename format, to change the order, you must change the dates in the filenames.</p>
+
+<p><strong>Tags</strong>
+Posts can have tags associated with them as part of their meta-data. Tags may be placed on posts by providing them in the post’s YAML front matter. You have access to the post-specific tags in the templates. These tags also get added to the sitewide collection.</p>
+
+<p><strong>Categories</strong>
+Posts may be categorized by providing one or more categories in the YAML front matter. Categories offer more significance over tags in that they can be reflected in the URL path to the given post. Note categories in Jekyll work in a specific way. If you define more than one category you are defining a category hierarchy “set”. Example:</p>
+
+<div class="code-header">
+	<button class="copy-code-button" aria-label="Copy code to clipboard"></button>
+</div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>---
+title: Hello World
+categories: [lessons, beginner]
+---
+</code></pre></div></div>
+
+<p>This defines the category hierarchy “lessons/beginner”. Note this is one category node in Jekyll. You won’t find “lessons” and “beginner” as two separate categories unless you define them elsewhere as singular categories.</p>
+
+<p><strong>Working With Pages</strong></p>
+
+<p><strong>Creating a Page</strong>
+Pages are created by properly formatting a file and placing it anywhere in the root directory or subdirectories that do not start with an underscore.</p>
+
+<p><strong>Formatting</strong>
+In order to register as a Jekyll page the file must contain YAML Front-Matter. Registering a page means 1) that Jekyll will process the page and 2) that the page object will be available in the site.pages array for inclusion into your templates.</p>
+
+<p><strong>Categories and Tags</strong>
+Pages do not compute categories nor tags so defining them will have no effect.</p>
+
+<p><strong>Sub-Directories</strong>
+If pages are defined in sub-directories, the path to the page will be reflected in the url. Example:</p>
+
+<p><img src="/img/posts/jekyllguide/working-with-pages.JPG" style="width:40%; display:block; margin-left:auto; margin-right:auto;" /></p>
+
+<p>This page will be available at <code style="display: inline;">http://yourdomain.com/people/bob/essay.html</code></p>
+
+<p><strong>Recommended Pages</strong></p>
+
+<ul>
+  <li><strong>index.html</strong>
+You will always want to define the root index.html page as this will display on your root URL.</li>
+  <li><strong>404.html</strong>
+Create a root 404.html page and GitHub Pages will serve it as your 404 response.</li>
+  <li><strong>sitemap.html</strong>
+Generating a sitemap is good practice for SEO.</li>
+  <li><strong>about.html</strong>
+A nice about page is easy to do and gives the human perspective to your website.</li>
+</ul>
+
+<h1 id="templates-in-jekyll">Templates in Jekyll</h1>
+
+<p>Templates are used to contain a page’s or post’s content. All templates have access to a global site object variable: <span style="color: #e83e8c;">site</span> as well as a page object variable: <span style="color: #e83e8c;">page</span>. The site variable holds all accessible content and metadata relative to the site. The page variable holds accessible data for the given page or post being rendered at that point.</p>
+
+<p><strong>Create a Template</strong>
+Templates are created by properly formatting a file and placing it in the <span style="color: #e83e8c;">_layouts</span> directory.</p>
+
+<p><strong>Formatting</strong>
+Templates should be coded in HTML and contain YAML Front Matter. All templates can contain Liquid code to work with your site’s data.</p>
+
+<p><strong>Rending Page/Post Content in a Template</strong>
+There is a special variable in all templates named : <span style="color: #e83e8c;">content</span>. The <span style="color: #e83e8c;">content</span> variable holds the page/post content including any sub-template content previously defined. Render the content variable wherever you want your main content to be injected into your template:</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;body&gt;</span>
+	<span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"sidebar"</span><span class="nt">&gt;</span>...<span class="nt">&lt;/div&gt;</span>
+	<span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"main"</span><span class="nt">&gt;</span><span class="c">&lt;!-- Page Header --&gt;</span>
+
+<span class="nt">&lt;header</span> <span class="na">class=</span><span class="s">"masthead"</span> <span class="na">style=</span><span class="s">"background-image: url('/img/posts/gitgithub/git-vs-github.png')"</span><span class="nt">&gt;</span>
+  
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"overlay"</span><span class="nt">&gt;&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"container"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-lg-8 col-md-10 mx-auto"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"post-heading"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;h1&gt;</span>Git and GitHub Guide<span class="nt">&lt;/h1&gt;</span>
+            
+            <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"meta"</span><span class="nt">&gt;</span>Posted by
+              <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;&lt;/a&gt;</span>
+              on December 25, 2021 <span class="ni">&amp;middot;</span> <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"reading-time"</span> <span class="na">title=</span><span class="s">"Estimated read time"</span><span class="nt">&gt;</span>
+  
+   16 mins  read <span class="nt">&lt;/span&gt;</span>
+
+            <span class="nt">&lt;/span&gt;</span>
+          <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/header&gt;</span>
+
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"container"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-lg-8 col-md-10 mx-auto"</span><span class="nt">&gt;</span>
+
+        <span class="nt">&lt;h1</span> <span class="na">id=</span><span class="s">"basic-git-and-github-guide"</span><span class="nt">&gt;</span>Basic Git and GitHub Guide<span class="nt">&lt;/h1&gt;</span>
+
+<span class="nt">&lt;hr</span> <span class="nt">/&gt;</span>
+
+<span class="nt">&lt;h4</span> <span class="na">id=</span><span class="s">"table-of-contents"</span><span class="nt">&gt;</span>Table of Contents<span class="nt">&lt;/h4&gt;</span>
+
+<span class="nt">&lt;ol&gt;</span>
+  <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#step1"</span><span class="nt">&gt;</span>Create a local git repository<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+  <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#step2"</span><span class="nt">&gt;</span>Add a new file to the repo<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+  <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#step3"</span><span class="nt">&gt;</span>Add a file to the staging environment<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+  <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#step4"</span><span class="nt">&gt;</span>Create a commit<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+  <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#step5"</span><span class="nt">&gt;</span>Create a new branch<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+  <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#step6"</span><span class="nt">&gt;</span>Create a new repository on GitHub<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+  <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#step7"</span><span class="nt">&gt;</span>Push a branch GitHub<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+  <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#step8"</span><span class="nt">&gt;</span>Create a pull request<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+  <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#step9"</span><span class="nt">&gt;</span>Merge a PR<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+  <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#step10"</span><span class="nt">&gt;</span>Get changes on GitHub back to your computer<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+  <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#step11"</span><span class="nt">&gt;</span>Bask in your git glory<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+<span class="nt">&lt;/ol&gt;</span>
+
+<span class="nt">&lt;hr</span> <span class="nt">/&gt;</span>
+
+<span class="nt">&lt;p&gt;&lt;img</span> <span class="na">src=</span><span class="s">"http://d1jnx9ba8s6j9r.cloudfront.net/blog/wp-content/uploads/2017/12/git-vs-github4.png"</span> <span class="na">alt=</span><span class="s">"GitandGitHub"</span> <span class="nt">/&gt;&lt;/p&gt;</span>
+
+<span class="nt">&lt;blockquote&gt;</span>
+  <span class="nt">&lt;p&gt;&lt;strong&gt;</span>📘<span class="nt">&lt;/strong&gt;</span> Git and GitHub
+A quick aside: <span class="nt">&lt;em&gt;</span>git<span class="nt">&lt;/em&gt;</span> and <span class="nt">&lt;em&gt;</span>GitHub<span class="nt">&lt;/em&gt;</span> are <span class="nt">&lt;strong&gt;</span>not<span class="nt">&lt;/strong&gt;</span> the same things. Git is an open-source, version control tool created in 2005 by developers working on the Linux OS; GitHub is a company founded in 2008 that makes tools which integrate with git. You do not need GitHub to use git, but you cannot use GitHub without using git. There are many other alternatives to GitHub, such as GitLab, BitBucket,… You do not need to use a remote to use git, but it will make sharing your code with others easier.<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;/blockquote&gt;</span>
+
+<span class="nt">&lt;h1</span> <span class="na">id=</span><span class="s">"step-1-create-a-local-git-repository-"</span><span class="nt">&gt;</span>Step 1: Create a local git repository <span class="nt">&lt;a</span> <span class="na">name=</span><span class="s">"step1"</span><span class="nt">&gt;&lt;/a&gt;&lt;/h1&gt;</span>
+
+<span class="nt">&lt;p&gt;</span>When creating new project on your local machine using git, you’ll first create a new repositori (repo). To begin, open up a terminal and move to where you want to place the project on you local machine. Then, run init command:<span class="nt">&lt;/p&gt;</span>
+
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"code-header"</span><span class="nt">&gt;</span>
+	<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"copy-code-button"</span> <span class="na">aria-label=</span><span class="s">"Copy code to clipboard"</span><span class="nt">&gt;&lt;/button&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"language-console highlighter-rouge"</span><span class="nt">&gt;&lt;div</span> <span class="na">class=</span><span class="s">"highlight"</span><span class="nt">&gt;&lt;pre</span> <span class="na">class=</span><span class="s">"highlight"</span><span class="nt">&gt;&lt;code&gt;&lt;span</span> <span class="na">class=</span><span class="s">"gp"</span><span class="nt">&gt;</span>name@ubuntu:~$<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"w"</span><span class="nt">&gt;</span> <span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"nb"</span><span class="nt">&gt;</span>cd <span class="nt">&lt;/span&gt;</span>myproject/
+<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"gp"</span><span class="nt">&gt;</span>name@ubuntu:~$<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"w"</span><span class="nt">&gt;</span> <span class="nt">&lt;/span&gt;</span>git init
+<span class="nt">&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</span>
+
+<span class="nt">&lt;h1</span> <span class="na">id=</span><span class="s">"step-2-add-a-new-file-to-the-repository-"</span><span class="nt">&gt;</span>Step 2: Add a new file to the repository <span class="nt">&lt;a</span> <span class="na">name=</span><span class="s">"step2"</span><span class="nt">&gt;&lt;/a&gt;&lt;/h1&gt;</span>
+
+<span class="nt">&lt;p&gt;</span>Go ahead and add some files in the folder. Once you have added or modified files in a folder containing a git repoo, git will notice that the file exists inside the repo. But, git won’t track the file unless you explicitly tell it to. Git only saves/manages changes to files that it tracks, so we will need to send a command to confirm that yes, want git to track our new file.<span class="nt">&lt;/p&gt;</span>
+
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"code-header"</span><span class="nt">&gt;</span>
+	<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"copy-code-button"</span> <span class="na">aria-label=</span><span class="s">"Copy code to clipboard"</span><span class="nt">&gt;&lt;/button&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"language-console highlighter-rouge"</span><span class="nt">&gt;&lt;div</span> <span class="na">class=</span><span class="s">"highlight"</span><span class="nt">&gt;&lt;pre</span> <span class="na">class=</span><span class="s">"highlight"</span><span class="nt">&gt;&lt;code&gt;&lt;span</span> <span class="na">class=</span><span class="s">"gp"</span><span class="nt">&gt;</span>name@ubuntu:~$<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"w"</span><span class="nt">&gt;</span> <span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"nb"</span><span class="nt">&gt;</span>touch <span class="nt">&lt;/span&gt;</span>file01.txt
+<span class="nt">&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</span>
+
+<span class="nt">&lt;p&gt;</span>You can git status command to see which files git knows exist<span class="nt">&lt;/p&gt;</span>
+
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"code-header"</span><span class="nt">&gt;</span>
+	<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"copy-code-button"</span> <span class="na">aria-label=</span><span class="s">"Copy code to clipboard"</span><span class="nt">&gt;&lt;/button&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"language-console highlighter-rouge"</span><span class="nt">&gt;&lt;div</span> <span class="na">class=</span><span class="s">"highlight"</span><span class="nt">&gt;&lt;pre</span> <span class="na">class=</span><span class="s">"highlight"</span><span class="nt">&gt;&lt;code&gt;&lt;span</span> <span class="na">class=</span><span class="s">"gp"</span><span class="nt">&gt;</span>name@ubuntu:~$<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"w"</span><span class="nt">&gt;</span> <span class="nt">&lt;/span&gt;</span>git status
+<span class="nt">&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</span>
+
+<span class="nt">&lt;blockquote&gt;</span>
+  <span class="nt">&lt;h5</span> <span class="na">id=</span><span class="s">"an-interlude-the-staging-environment-the-commit-and-you"</span><span class="nt">&gt;</span>An interlude: the staging environment, the commit, and you<span class="nt">&lt;/h5&gt;</span>
+
+  <span class="nt">&lt;p&gt;</span>One of the most confusing parts when you’re first learning git is the concept of the stagin environment and how it relates to a commit.<span class="nt">&lt;br</span> <span class="nt">/&gt;</span>
+A <span class="nt">&lt;em&gt;&lt;strong&gt;</span>commit<span class="nt">&lt;/strong&gt;&lt;/em&gt;</span> is a record of what changes you have made since the last time you made a commit. Commits make up the essence of your project and allow you to jump to the state of a project at any other commit. So, how do you tell git which files to put into a commit? This is where the staging environment or index come in. In Step 2, when you make changes to your repo, git notices that a file has changed but won’t do anything with it.<span class="nt">&lt;br</span> <span class="nt">/&gt;</span>
+To add a file to a commit, you first need to add it to the staging environment. To do this, you can use the <span class="nt">&lt;em&gt;</span>git add <span class="ni">&amp;lt;</span> filename <span class="ni">&amp;gt;</span><span class="nt">&lt;/em&gt;</span> command. One you’ve used git add command to add all the files you want to the staging environment, you can then tell git to package them into a commit using the <span class="nt">&lt;em&gt;</span>git commit<span class="nt">&lt;/em&gt;</span> command.<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;/blockquote&gt;</span>
+
+<span class="nt">&lt;h1</span> <span class="na">id=</span><span class="s">"step-3-add-a-file-to-the-staging-environment-"</span><span class="nt">&gt;</span>Step 3: Add a file to the staging environment <span class="nt">&lt;a</span> <span class="na">name=</span><span class="s">"step3"</span><span class="nt">&gt;&lt;/a&gt;&lt;/h1&gt;</span>
+
+<span class="nt">&lt;p&gt;</span>Add a file to the staging environment using the git add command. if you rerun the git status command you will see that git has added the file to the staging environment.<span class="nt">&lt;/p&gt;</span>
+
+<span class="nt">&lt;p&gt;</span>Below is add a specific file.<span class="nt">&lt;/p&gt;</span>
+
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"code-header"</span><span class="nt">&gt;</span>
+	<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"copy-code-button"</span> <span class="na">aria-label=</span><span class="s">"Copy code to clipboard"</span><span class="nt">&gt;&lt;/button&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"language-console highlighter-rouge"</span><span class="nt">&gt;&lt;div</span> <span class="na">class=</span><span class="s">"highlight"</span><span class="nt">&gt;&lt;pre</span> <span class="na">class=</span><span class="s">"highlight"</span><span class="nt">&gt;&lt;code&gt;&lt;span</span> <span class="na">class=</span><span class="s">"gp"</span><span class="nt">&gt;</span>name@ubuntu:~$<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"w"</span><span class="nt">&gt;</span> <span class="nt">&lt;/span&gt;</span>git add file01.txt
+<span class="nt">&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</span>
+
+<span class="nt">&lt;p&gt;</span>or <span class="nt">&lt;em&gt;</span>git add .<span class="nt">&lt;/em&gt;</span> to add all your files to the staging environment.<span class="nt">&lt;/p&gt;</span>
+
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"code-header"</span><span class="nt">&gt;</span>
+	<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"copy-code-button"</span> <span class="na">aria-label=</span><span class="s">"Copy code to clipboard"</span><span class="nt">&gt;&lt;/button&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"language-console highlighter-rouge"</span><span class="nt">&gt;&lt;div</span> <span class="na">class=</span><span class="s">"highlight"</span><span class="nt">&gt;&lt;pre</span> <span class="na">class=</span><span class="s">"highlight"</span><span class="nt">&gt;&lt;code&gt;&lt;span</span> <span class="na">class=</span><span class="s">"gp"</span><span class="nt">&gt;</span>name@ubuntu:~$<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"w"</span><span class="nt">&gt;</span> <span class="nt">&lt;/span&gt;</span>git add <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"nb"</span><span class="nt">&gt;</span>.<span class="nt">&lt;/span&gt;</span>
+<span class="nt">&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</span>
+
+<span class="nt">&lt;h1</span> <span class="na">id=</span><span class="s">"step-4-create-a-commit-"</span><span class="nt">&gt;</span>Step 4: Create a commit <span class="nt">&lt;a</span> <span class="na">name=</span><span class="s">"step4"</span><span class="nt">&gt;&lt;/a&gt;&lt;/h1&gt;</span>
+
+<span class="nt">&lt;p&gt;</span>Run the command <span class="nt">&lt;em&gt;</span>git commit -m “your message”<span class="nt">&lt;/em&gt;</span>. The message at the end of the commit should be something related to what the commit contains - maybe it’s a new feature, maybe it’s a bug fix, maybe it’s just fixing a typo. Commits live forever in a repository (technically you can delete them if you really, really need to but it’s messy), so if you leave a clear explanation of your changes it can be extremely helpful for future programmers (perhaps future you!) who are trying to figure out why some change was made years later.<span class="nt">&lt;/p&gt;</span>
+
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"code-header"</span><span class="nt">&gt;</span>
+	<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"copy-code-button"</span> <span class="na">aria-label=</span><span class="s">"Copy code to clipboard"</span><span class="nt">&gt;&lt;/button&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"language-console highlighter-rouge"</span><span class="nt">&gt;&lt;div</span> <span class="na">class=</span><span class="s">"highlight"</span><span class="nt">&gt;&lt;pre</span> <span class="na">class=</span><span class="s">"highlight"</span><span class="nt">&gt;&lt;code&gt;&lt;span</span> <span class="na">class=</span><span class="s">"gp"</span><span class="nt">&gt;</span>name@ubuntu:~$<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"w"</span><span class="nt">&gt;</span> <span class="nt">&lt;/span&gt;</span>git commit <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"nt"</span><span class="nt">&gt;</span>-m<span class="nt">&lt;/span&gt;</span> <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"s2"</span><span class="nt">&gt;</span>"my first commit"<span class="nt">&lt;/span&gt;</span>
+<span class="nt">&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</span>
+
+<span class="nt">&lt;h1</span> <span class="na">id=</span><span class="s">"step-5-create-a-new-branch-"</span><span class="nt">&gt;</span>Step 5: Create a new branch <span class="nt">&lt;a</span> <span class="na">name=</span><span class="s">"step5"</span><span class="nt">&gt;&lt;/a&gt;&lt;/h1&gt;</span>
+
+<span class="nt">&lt;p&gt;</span>Say you want to make a new feature but are worried about making changes to the main project while developing the feature. This is where <span class="nt">&lt;em&gt;</span>git branches<span class="nt">&lt;/em&gt;</span> come in.<span class="nt">&lt;/p&gt;</span>
+
+<span class="nt">&lt;p&gt;</span>Branches allow you to move back and forth between ‘states’ of a project. For instance, if you want to add a new page to your website you can create a new branch just for that page without affecting the main part of the project. Once you’re done with the page, you can merge your changes from your branch into the primary branch. When you create a new branch, Git keeps track of which commit your branch ‘branched’ off of, so it knows the history behind all the files.<span class="nt">&lt;/p&gt;</span>
+
+<span class="nt">&lt;p&gt;</span>Let’s say you are on the primary branch and want to create a new branch to develop your web page. Here’s what you’ll do: Run <span class="nt">&lt;em&gt;</span>git checkout -b <span class="ni">&amp;lt;</span> my branch name <span class="ni">&amp;gt;</span><span class="nt">&lt;/em&gt;</span>. This command will automatically create a new branch and then ‘check you out’ on it, meaning git will move you to that branch, off of the primary branch.<span class="nt">&lt;/p&gt;</span>
+
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"code-header"</span><span class="nt">&gt;</span>
+	<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"copy-code-button"</span> <span class="na">aria-label=</span><span class="s">"Copy code to clipboard"</span><span class="nt">&gt;&lt;/button&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"language-console highlighter-rouge"</span><span class="nt">&gt;&lt;div</span> <span class="na">class=</span><span class="s">"highlight"</span><span class="nt">&gt;&lt;pre</span> <span class="na">class=</span><span class="s">"highlight"</span><span class="nt">&gt;&lt;code&gt;&lt;span</span> <span class="na">class=</span><span class="s">"gp"</span><span class="nt">&gt;</span>name@ubuntu:~$<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"w"</span><span class="nt">&gt;</span> <span class="nt">&lt;/span&gt;</span>git checkout <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"nt"</span><span class="nt">&gt;</span>-b<span class="nt">&lt;/span&gt;</span> testbranch
+<span class="nt">&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</span>
+
+<span class="nt">&lt;p&gt;</span>After running the above command, you can use the git branch command to confirm that your branch was created. The branch name with the <span class="nt">&lt;em&gt;</span>asterisk<span class="nt">&lt;/em&gt;</span> next to it indicates which branch you’re on at that given time.<span class="nt">&lt;/p&gt;</span>
+
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"code-header"</span><span class="nt">&gt;</span>
+	<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"copy-code-button"</span> <span class="na">aria-label=</span><span class="s">"Copy code to clipboard"</span><span class="nt">&gt;&lt;/button&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"language-console highlighter-rouge"</span><span class="nt">&gt;&lt;div</span> <span class="na">class=</span><span class="s">"highlight"</span><span class="nt">&gt;&lt;pre</span> <span class="na">class=</span><span class="s">"highlight"</span><span class="nt">&gt;&lt;code&gt;&lt;span</span> <span class="na">class=</span><span class="s">"gp"</span><span class="nt">&gt;</span>name@ubuntu:~$<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"w"</span><span class="nt">&gt;</span> <span class="nt">&lt;/span&gt;</span>git branch
+<span class="nt">&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</span>
+
+<span class="nt">&lt;blockquote&gt;</span>
+  <span class="nt">&lt;h5</span> <span class="na">id=</span><span class="s">"a-note-on-branch-names"</span><span class="nt">&gt;</span>A note on branch names<span class="nt">&lt;/h5&gt;</span>
+
+  <span class="nt">&lt;p&gt;</span>By default, every git repository’s first branch is named <span class="nt">&lt;strong&gt;</span>master<span class="nt">&lt;/strong&gt;</span> (and is typically used as the primary branch in the project). As part of the tech industry’s general anti-racism work, some groups have begun to use alternate names for the default branch (we are using “primary” in this tutorial, for example). In other documentation and discussions, you may see “master”, or other terms, used to refer to the primary branch. Regardless of the name, just keep in mind that nearly every repository has a primary branch that can be thought of as the official version of the repository. If it’s a website, then the primary branch is the version that users see. If it’s an application, then the primary branch is the version that users download. This isn’t technically necessary (git doesn’t treat any branches differently from other branches), but it’s how git is traditionally used in a project. <span class="nt">&lt;br</span> <span class="nt">/&gt;</span>
+Now, if you switch back to the primary branch and make some more commits, your new branch won’t see any of those changes until you <span class="nt">&lt;em&gt;</span>merge<span class="nt">&lt;/em&gt;</span> those changes onto your new branch.<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;/blockquote&gt;</span>
+
+<span class="nt">&lt;h1</span> <span class="na">id=</span><span class="s">"step-6-create-a-new-repository-on-github-"</span><span class="nt">&gt;</span>Step 6: Create a new repository on GitHub <span class="nt">&lt;a</span> <span class="na">name=</span><span class="s">"step6"</span><span class="nt">&gt;&lt;/a&gt;&lt;/h1&gt;</span>
+
+<span class="nt">&lt;p&gt;</span>If you only want to keep track of your code locally, you don’t need to use GitHub. But if you want to work with a team, you can use GitHub to collaboratively modify the project’s code.<span class="nt">&lt;/p&gt;</span>
+
+<span class="nt">&lt;p&gt;</span>To create a new repo on GitHub, log in and go to the GitHub home page. You can find the “New repository” option under the “+” sign next to your profile picture, in the top right corner of the navbar:
+<span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"/img/posts/gitgithub/github_step6_1.JPG"</span> <span class="na">alt=</span><span class="s">"create a new repo"</span> <span class="nt">/&gt;</span>
+After clicking the button, GitHub will ask you to name your repo and provide a brief description. When you’re done filling out the information, press the ‘Create repository’ button to make your new repo.
+<span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"/img/posts/gitgithub/github_step6_2.JPG"</span> <span class="na">alt=</span><span class="s">"create a new repo"</span> <span class="nt">/&gt;&lt;/p&gt;</span>
+
+<span class="nt">&lt;p&gt;</span>GitHub will ask if you want to create a new repo from scratch or if you want to add a repo you have created locally. In this case, since we’ve already created a new repo locally, we want to push that onto GitHub so follow the ‘….or push an existing repository from the command line’ section:<span class="nt">&lt;/p&gt;</span>
+
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"code-header"</span><span class="nt">&gt;</span>
+	<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"copy-code-button"</span> <span class="na">aria-label=</span><span class="s">"Copy code to clipboard"</span><span class="nt">&gt;&lt;/button&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"language-console highlighter-rouge"</span><span class="nt">&gt;&lt;div</span> <span class="na">class=</span><span class="s">"highlight"</span><span class="nt">&gt;&lt;pre</span> <span class="na">class=</span><span class="s">"highlight"</span><span class="nt">&gt;&lt;code&gt;&lt;span</span> <span class="na">class=</span><span class="s">"gp"</span><span class="nt">&gt;</span>name@ubuntu:~$<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"w"</span><span class="nt">&gt;</span> <span class="nt">&lt;/span&gt;</span>git remote add origin https://github.com/<span class="ni">&amp;lt;</span>username<span class="ni">&amp;gt;</span>/<span class="ni">&amp;lt;</span>yourreponame<span class="ni">&amp;gt;</span>.git
+<span class="nt">&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</span>
+
+<span class="nt">&lt;h1</span> <span class="na">id=</span><span class="s">"step-7-push-a-branch-to-github-"</span><span class="nt">&gt;</span>Step 7: Push a branch to GitHub <span class="nt">&lt;a</span> <span class="na">name=</span><span class="s">"step7"</span><span class="nt">&gt;&lt;/a&gt;&lt;/h1&gt;</span>
+
+<span class="nt">&lt;p&gt;</span>Now we’ll push the commit in your branch to your new GitHub repo. This allows other people to see the changes you’ve made. If they’re approved by the repository’s owner, the changes can then be merged into the primary branch.<span class="nt">&lt;/p&gt;</span>
+
+<span class="nt">&lt;p&gt;</span>To push changes onto a new branch on GitHub, you’ll want to run <span class="nt">&lt;em&gt;</span>git push origin yourbranchname<span class="nt">&lt;/em&gt;</span>. GitHub will automatically create the branch for you on the remote repository:<span class="nt">&lt;/p&gt;</span>
+
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"code-header"</span><span class="nt">&gt;</span>
+	<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"copy-code-button"</span> <span class="na">aria-label=</span><span class="s">"Copy code to clipboard"</span><span class="nt">&gt;&lt;/button&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"language-console highlighter-rouge"</span><span class="nt">&gt;&lt;div</span> <span class="na">class=</span><span class="s">"highlight"</span><span class="nt">&gt;&lt;pre</span> <span class="na">class=</span><span class="s">"highlight"</span><span class="nt">&gt;&lt;code&gt;&lt;span</span> <span class="na">class=</span><span class="s">"gp"</span><span class="nt">&gt;</span>name@ubuntu:~$<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"w"</span><span class="nt">&gt;</span> <span class="nt">&lt;/span&gt;</span>git push origin <span class="ni">&amp;lt;</span>your-branch-name<span class="ni">&amp;gt;</span>
+<span class="nt">&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</span>
+
+<span class="nt">&lt;p&gt;</span>You might be wondering what that “origin” word means in the command above. What happens is that when you clone a remote repository to your local machine, git creates an alias for you. In nearly all cases this alias is called “origin.” It’s essentially shorthand for the remote repository’s URL. So, to push your changes to the remote repository, you could’ve used either the command: git push git@github.com:git/git.git yourbranchname or git push origin yourbranchname<span class="nt">&lt;/p&gt;</span>
+
+<span class="nt">&lt;p&gt;&lt;em&gt;</span>(If this is your first time using GitHub locally, it might prompt you to log in with your GitHub username and password.)<span class="nt">&lt;/em&gt;&lt;/p&gt;</span>
+
+<span class="nt">&lt;h1</span> <span class="na">id=</span><span class="s">"step-8-create-a-pull-request-"</span><span class="nt">&gt;</span>Step 8: Create a pull request <span class="nt">&lt;a</span> <span class="na">name=</span><span class="s">"step8"</span><span class="nt">&gt;&lt;/a&gt;&lt;/h1&gt;</span>
+
+<span class="nt">&lt;p&gt;</span>A pull request (or PR) is a way to alert a repo’s owners that you want to make some changes to their code. It allows them to review the code and make sure it looks good before putting your changes on the primary branch.<span class="nt">&lt;/p&gt;</span>
+
+<span class="nt">&lt;p&gt;</span>This is what the PR page looks like before you’ve submitted it:
+<span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"https://product.hubspot.com/hs-fs/hubfs/Git_4.png?width=600&amp;amp;name=Git_4.png"</span> <span class="na">alt=</span><span class="s">"pull request"</span> <span class="nt">/&gt;&lt;/p&gt;</span>
+
+<span class="nt">&lt;p&gt;</span>And this is what it looks like once you’ve submitted the PR request:
+<span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"https://product.hubspot.com/hs-fs/hubfs/Git_5.png?width=600&amp;amp;name=Git_5.png"</span> <span class="na">alt=</span><span class="s">"pull request"</span> <span class="nt">/&gt;&lt;/p&gt;</span>
+
+<span class="nt">&lt;p&gt;</span>You might see a big green button at the bottom that says ‘Merge pull request’. Clicking this means you’ll merge your changes into the primary branch..<span class="nt">&lt;/p&gt;</span>
+
+<span class="nt">&lt;p&gt;</span>Sometimes you’ll be a co-owner or the sole owner of a repo, in which case you may not need to create a PR to merge your changes. However, it’s still a good idea to make one so you can keep a more complete history of your updates and to make sure you always create a new branch when making changes.<span class="nt">&lt;/p&gt;</span>
+
+<span class="nt">&lt;h1</span> <span class="na">id=</span><span class="s">"step-9-merge-a-pr"</span><span class="nt">&gt;</span>Step 9: Merge a PR<span class="nt">&lt;/h1&gt;</span>
+
+<span class="nt">&lt;p&gt;</span>Go ahead and click the green ‘Merge pull request’ button. This will merge your changes into the primary branch.
+<span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"https://product.hubspot.com/hs-fs/hubfs/Git_6.png?width=600&amp;amp;name=Git_6.png"</span> <span class="na">alt=</span><span class="s">""</span> <span class="nt">/&gt;&lt;/p&gt;</span>
+
+<span class="nt">&lt;p&gt;</span>When you’re done, I recommend deleting your branch (too many branches can become messy), so hit that grey ‘Delete branch’ button as well.<span class="nt">&lt;/p&gt;</span>
+
+<span class="nt">&lt;p&gt;</span>You can double check that your commits were merged by clicking on the ‘Commits’ link on the first page of your new repo.
+<span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"https://product.hubspot.com/hs-fs/hubfs/Git_7.png?width=600&amp;amp;name=Git_7.png"</span> <span class="na">alt=</span><span class="s">""</span> <span class="nt">/&gt;&lt;/p&gt;</span>
+
+<span class="nt">&lt;p&gt;</span>This will show you a list of all the commits in that branch. You can see the one I just merged right up top (Merge pull request #1).
+<span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"https://product.hubspot.com/hs-fs/hubfs/Git_8.png?width=600&amp;amp;name=Git_8.png"</span> <span class="na">alt=</span><span class="s">""</span> <span class="nt">/&gt;&lt;/p&gt;</span>
+
+<span class="nt">&lt;p&gt;</span>You can also see the hash code of the commit on the right hand side. A hash code is a unique identifier for that specific commit. It is useful for referring to specific commits and when undoing changes (use the <span class="nt">&lt;em&gt;</span>git revert <span class="nt">&lt;br</span> <span class="nt">/&gt;</span><span class="ni">&amp;lt;</span> hash code number <span class="ni">&amp;gt;</span><span class="nt">&lt;/em&gt;</span> command to backtrack).<span class="nt">&lt;/p&gt;</span>
+
+<span class="nt">&lt;h1</span> <span class="na">id=</span><span class="s">"step-10-get-changes-on-github-back-to-your-computer-"</span><span class="nt">&gt;</span>Step 10: Get changes on GitHub back to your computer <span class="nt">&lt;a</span> <span class="na">name=</span><span class="s">"step10"</span><span class="nt">&gt;&lt;/a&gt;&lt;/h1&gt;</span>
+
+<span class="nt">&lt;p&gt;</span>Right now, the repo on GitHub looks a little different than what you have on your local machine. For example, the commit you made in your branch and merged into the primary branch doesn’t exist in the primary branch on your local machine.<span class="nt">&lt;/p&gt;</span>
+
+<span class="nt">&lt;p&gt;</span>In order to get the most recent changes that you or others have merged on GitHub, use the <span class="nt">&lt;em&gt;</span>git pull origin master<span class="nt">&lt;/em&gt;</span> command (when working on the primary branch). In most cases, this can be shortened to “git pull”.<span class="nt">&lt;/p&gt;</span>
+
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"code-header"</span><span class="nt">&gt;</span>
+	<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"copy-code-button"</span> <span class="na">aria-label=</span><span class="s">"Copy code to clipboard"</span><span class="nt">&gt;&lt;/button&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"language-console highlighter-rouge"</span><span class="nt">&gt;&lt;div</span> <span class="na">class=</span><span class="s">"highlight"</span><span class="nt">&gt;&lt;pre</span> <span class="na">class=</span><span class="s">"highlight"</span><span class="nt">&gt;&lt;code&gt;&lt;span</span> <span class="na">class=</span><span class="s">"gp"</span><span class="nt">&gt;</span>name@ubuntu:~$<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"w"</span><span class="nt">&gt;</span> <span class="nt">&lt;/span&gt;</span>git pull origin master
+<span class="nt">&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</span>
+
+<span class="nt">&lt;p&gt;</span>This shows you all the files that have changed and how they’ve changed.<span class="nt">&lt;/p&gt;</span>
+
+<span class="nt">&lt;p&gt;</span>Now we can use the <span class="nt">&lt;em&gt;</span>git log<span class="nt">&lt;/em&gt;</span> command again to see all new commits.<span class="nt">&lt;/p&gt;</span>
+
+<span class="nt">&lt;p&gt;</span>(You may need to switch branches back to the primary branch. You can do that using the git checkout master command.)<span class="nt">&lt;/p&gt;</span>
+
+<span class="nt">&lt;h1</span> <span class="na">id=</span><span class="s">"step-11-bask-in-your-git-glory-"</span><span class="nt">&gt;</span>Step 11: Bask in your git glory <span class="nt">&lt;a</span> <span class="na">name=</span><span class="s">"step11"</span><span class="nt">&gt;&lt;/a&gt;&lt;/h1&gt;</span>
+
+<span class="nt">&lt;p&gt;</span>You’ve successfully made a PR and merged your code to the primary branch. Congratulations! If you’d like to dive deeper, check out these more advanced tutorials and resources:<span class="nt">&lt;/p&gt;</span>
+
+<span class="nt">&lt;p&gt;&lt;a</span> <span class="na">href=</span><span class="s">"/resources"</span> <span class="na">target=</span><span class="s">"_blank"</span><span class="nt">&gt;</span>Resources<span class="nt">&lt;/a&gt;&lt;/p&gt;</span>
+
+<span class="nt">&lt;p&gt;&lt;strong&gt;</span>Reference<span class="nt">&lt;/strong&gt;</span>: <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"https://product.hubspot.com/blog/git-and-github-tutorial-for-beginners"</span> <span class="na">target=</span><span class="s">"_blank"</span><span class="nt">&gt;</span>An Intro to Git and GitHub for Beginners (Tutorial)<span class="nt">&lt;/a&gt;</span> by HubSpot Product Team on DEC 3, 2020<span class="nt">&lt;/p&gt;</span>
+
+<span class="nt">&lt;p&gt;&lt;strong&gt;&lt;em&gt;</span>Disclaimer<span class="nt">&lt;/em&gt;&lt;/strong&gt;</span>: This content is for educational intention only.<span class="nt">&lt;/p&gt;</span>
+
+
+        <span class="nt">&lt;hr&gt;</span>
+
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"clearfix"</span><span class="nt">&gt;</span>
+
+          
+          <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"btn btn-primary float-left"</span> <span class="na">href=</span><span class="s">"/2021/12/24/roadmap.html"</span> <span class="na">data-toggle=</span><span class="s">"tooltip"</span> <span class="na">data-placement=</span><span class="s">"top"</span> <span class="na">title=</span><span class="s">"Project Roadmap"</span><span class="nt">&gt;</span><span class="ni">&amp;larr;</span> Previous<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"d-none d-md-inline"</span><span class="nt">&gt;</span>
+              Post<span class="nt">&lt;/span&gt;&lt;/a&gt;</span>
+          
+          
+          <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"btn btn-primary float-right"</span> <span class="na">href=</span><span class="s">"/jekyll-guide"</span> <span class="na">data-toggle=</span><span class="s">"tooltip"</span> <span class="na">data-placement=</span><span class="s">"top"</span> <span class="na">title=</span><span class="s">"Jekyll Guide"</span><span class="nt">&gt;</span>Next<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"d-none d-md-inline"</span><span class="nt">&gt;</span>
+              Post<span class="nt">&lt;/span&gt;</span> <span class="ni">&amp;rarr;</span><span class="nt">&lt;/a&gt;</span>
+          
+
+        <span class="nt">&lt;/div&gt;</span>
+
+      <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/body&gt;</span>
+</code></pre></div></div>
+
+<p><strong>Reference</strong>:</p>
+
+<ol>
+  <li><a href="https://jekyllrb.com/docs/" target="_blank">Jekyll Docs Quickstart</a></li>
+  <li><a href="http://jekyllbootstrap.com/lessons/jekyll-introduction.html" target="_blank">http://jekyllbootstrap.com/lessons/jekyll-introduction.html</a></li>
+</ol>
+:ET
