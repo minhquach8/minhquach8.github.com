@@ -1,0 +1,87 @@
+---
+layout: page
+title: Your Work Log
+subtitle: Fill your time in google sheet
+permalink: /logtime
+background: '/img/bg-index.jpg'
+---
+
+<div class="register">
+	<div class="row">
+		<div class="col-md-12">
+			<h3 class="register-heading">Fill Your Work Log</h3>
+			<div class="row register-form">
+				<div class="col-md-12">
+					<form method="post" autocomplete="off" name="google-sheet">
+						<div class="form-group">
+							<input
+								type="date"
+								name="Date"
+								class="form-control"
+								placeholder="Date"
+								value=""
+								required=""
+							/>
+						</div>
+						<div class="form-group">
+							<input
+								type="text"
+								name="Name"
+								class="form-control"
+								placeholder="Your Name*"
+								value=""
+								required=""
+							/>
+						</div>
+						<div class="form-group">
+							<input
+								type="text"
+								name="Task"
+								class="form-control"
+								placeholder="Your task name*"
+								value=""
+								required=""
+							/>
+						</div>
+						<div class="form-group">
+							<input
+								name="Duration"
+								type="text"
+								class="html-duration-picker form-control"
+								placeholder="Your Duration *"
+								value=""
+							/>
+						</div>
+						<div class="form-group">
+							<input
+								type="submit"
+								name="submit"
+								class="btn-primary btn-block"
+								value="Submit"
+							/>
+						</div>
+						<button class="btn btn-primary float-right">
+							<a
+								href="https://docs.google.com/spreadsheets/d/1OHkkVMH9abWKZJyOCt8HWAOPgyONESHUUj2ZzwO-dYk/edit?usp=sharing"
+							></a>
+							Go to Google Sheet
+						</button>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script>
+	const scriptURL =
+		'https://script.google.com/macros/s/AKfycbwphz-MPEmyolp6Bvx3wNtvl_nBFmqjVftDj1SFjCHSsUI362gFfO1CLJJT4wkkrAIg/exec';
+	const form = document.forms['google-sheet'];
+
+	form.addEventListener('submit', (e) => {
+		e.preventDefault();
+		fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+			.then((response) => swal('Success', "You're doing great!", 'success'))
+			.catch((error) => console.error('Error!', error.message));
+	});
+</script>
