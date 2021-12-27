@@ -29,3 +29,7 @@ background: '/img/bg-resources.jpg'
 ### Team Notion:
 
 - <a href="https://www.notion.so/minhquach8/R-D-e8566941a2f7447499496910a06eaa72" target="_blank"> Team Notion </a>
+
+### Log Your Time:
+
+- <a href="/logtime" target="_blank">Time Log</a>
