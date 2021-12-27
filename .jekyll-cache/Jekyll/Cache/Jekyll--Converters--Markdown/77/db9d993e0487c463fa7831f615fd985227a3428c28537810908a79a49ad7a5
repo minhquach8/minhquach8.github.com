@@ -1,4 +1,13 @@
-I"]<blockquote>
+I"�^<p>d—
+layout: post
+title: Jekyll Guide
+author: Minh
+permalink: /jekyll-guide
+background: ‘/img/posts/jekyllguide/jekyll-background.jpeg’
+date: 2021-12-26
+—</p>
+
+<blockquote>
   <p>Jekyll is a static site generator. It takes text written in your favorite
 markup language and uses layouts to create a static website. You can tweak the
 site’s look and feel, URLs, the data displayed on the page, and more.</p>
@@ -65,9 +74,9 @@ site’s look and feel, URLs, the data displayed on the page, and more.</p>
 
 <p>You can follow this video. Do not worry if the terminal shows error, just make sure that you follow the steps in video carefully and you can check the version successfully then it is good to go.</p>
 
-<center>
+<div class="iframe-container">
   <iframe width="560" height="315" src="https://www.youtube.com/embed/LfP7Y9Ja6Qc?start=42" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
-</center>
+</div>
 
 <p>After successfully installing, you can create your blog by typing 03 commnands below sequentially.</p>
 
@@ -96,6 +105,13 @@ site’s look and feel, URLs, the data displayed on the page, and more.</p>
 <ul>
   <li>Build the site and make it available on a local server.</li>
 </ul>
+
+<div class="code-header">
+	<button class="copy-code-button" aria-label="Copy code to clipboard"></button>
+</div>
+
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="go">bundle install
+</span></code></pre></div></div>
 
 <div class="code-header">
 	<button class="copy-code-button" aria-label="Copy code to clipboard"></button>

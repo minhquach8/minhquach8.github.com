@@ -68,9 +68,9 @@ First you need to install ruby on your machine. You can download it from this <a
 
 You can follow this video. Do not worry if the terminal shows error, just make sure that you follow the steps in video carefully and you can check the version successfully then it is good to go.
 
-<center>
+<div class="iframe-container">
   <iframe width="560" height="315" src="https://www.youtube.com/embed/LfP7Y9Ja6Qc?start=42" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</center>
+</div>
 
 After successfully installing, you can create your blog by typing 03 commnands below sequentially.
 
@@ -91,6 +91,12 @@ cd myblog
 ```
 
 - Build the site and make it available on a local server.
+
+{% include code-header.html %}
+
+```console
+bundle install
+```
 
 {% include code-header.html %}
 
@@ -333,11 +339,15 @@ _**You can see more with these :**_
 
 - The playlist 19 videos with basic knowledge about Jekyll:
 
+<div class="iframe-container">
 <iframe width="560" height="315" class="myCenter" src="https://www.youtube.com/embed/videoseries?list=PLLAZ4kZ9dFpOPV5C5Ay0pHaa0RJFhcmcB" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 - This blog is mainly based on this playlist below:
 
+<div class="iframe-container">
 <iframe class="myCenter" width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PLr5uaPu5L7xIg2GqO7HE0Tf-BCCkAf7-I" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 **Reference**:<br>1. <a href="https://jekyllrb.com/docs/" target="_blank"> Jekyll Docs Quickstart</a> <br>2. <a href="http://jekyllbootstrap.com/lessons/jekyll-introduction.html" target="_blank"> http://jekyllbootstrap.com/lessons/jekyll-introduction.html</a>
 
