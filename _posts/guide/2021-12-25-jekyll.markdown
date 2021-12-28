@@ -352,3 +352,7 @@ _**You can see more with these :**_
 **Reference**:<br>1. <a href="https://jekyllrb.com/docs/" target="_blank"> Jekyll Docs Quickstart</a> <br>2. <a href="http://jekyllbootstrap.com/lessons/jekyll-introduction.html" target="_blank"> http://jekyllbootstrap.com/lessons/jekyll-introduction.html</a>
 
 **_Disclaimer_**: This content is for educational intention only.
+
+<button class="btn-primary" style="font-size:14px;" onclick="Export2Doc('exportContent', 'test');">
+  Export as Doc
+</button>
