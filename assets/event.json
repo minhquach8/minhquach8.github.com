@@ -2,56 +2,51 @@
 	"myEvents": [
 		{
 			"id": "1",
-			"name": "O0500- Software Architecture",
+			"name": "Control Flow Diagram",
 			"badge": "9:00 - 10:30",
-			"date": "December/27/2021",
+			"date": "January/4/2022",
 			"type": "event"
 		},
 		{
 			"id": "2",
-			"name": "Research algorithms",
+			"name": "UI Prototype",
 			"badge": "10:30 - 11:30",
-			"date": "December/27/2021",
+			"date": "January/4/2022",
 			"type": "event"
 		},
 		{
 			"id": "3",
-			"name": "Research algorithms",
-			"badge": "Individual",
-			"date": "December/28/2021",
+			"name": "Control Flow Diagram",
+			"badge": "9:00 - 10:30",
+			"date": "January/5/2022",
 			"type": "event"
 		},
 		{
 			"id": "4",
-			"name": "Research algorithms",
-			"badge": "Individual",
-			"date": "December/29/2021",
-			"type": "event"
-		},
-		{
-			"id": "5",
-			"name": "Control Flow Diagram",
-			"badge": "9:00 - 10:30",
-			"date": "December/30/2021",
+			"name": "UI Prototype",
+			"badge": "10:30 - 11:30",
+			"date": "January/5/2022",
 			"type": "event"
 		},
 		{
 			"id": "6",
-			"name": "O0500- Software Architecture",
-			"badge": "9:00 - 10:30",
-			"date": "December/30/2021",
+			"name": "Office🏢",
+			"badge": "All day",
+			"date": "January/6/2022",
 			"type": "event"
 		},
 		{
 			"id": "7",
-			"name": "Office 🏢",
-			"date": "December/31/2021",
+			"name": "Control Flow Diagram",
+			"badge": "9:00 - 10:30",
+			"date": "January/7/2022",
 			"type": "event"
 		},
 		{
 			"id": "8",
-			"name": "Happy New Year 🎉",
-			"date": "January/1/2022",
+			"name": "D0160 - User-Interface Design",
+			"badge": "10:30 - 11:30",
+			"date": "January/7/2022",
 			"type": "event"
 		}
 	]
