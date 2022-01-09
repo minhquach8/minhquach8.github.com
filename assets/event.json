@@ -2,51 +2,51 @@
 	"myEvents": [
 		{
 			"id": "1",
-			"name": "Control Flow Diagram",
+			"name": "O0500- Software Architecture",
 			"badge": "9:00 - 10:30",
-			"date": "January/4/2022",
+			"date": "January/10/2022",
 			"type": "event"
 		},
 		{
 			"id": "2",
 			"name": "UI Prototype",
 			"badge": "10:30 - 11:30",
-			"date": "January/4/2022",
+			"date": "January/10/2022",
 			"type": "event"
 		},
 		{
 			"id": "3",
-			"name": "Control Flow Diagram",
+			"name": "O0500- Software Architecture",
 			"badge": "9:00 - 10:30",
-			"date": "January/5/2022",
+			"date": "January/11/2022",
 			"type": "event"
 		},
 		{
 			"id": "4",
-			"name": "UI Prototype",
+			"name": "Code UI",
 			"badge": "10:30 - 11:30",
-			"date": "January/5/2022",
+			"date": "January/11/2022",
 			"type": "event"
 		},
 		{
 			"id": "6",
 			"name": "Office🏢",
 			"badge": "All day",
-			"date": "January/6/2022",
+			"date": "January/13/2022",
 			"type": "event"
 		},
 		{
 			"id": "7",
-			"name": "Control Flow Diagram",
+			"name": "Code UI",
 			"badge": "9:00 - 10:30",
-			"date": "January/7/2022",
+			"date": "January/14/2022",
 			"type": "event"
 		},
 		{
 			"id": "8",
-			"name": "D0160 - User-Interface Design",
+			"name": "O0500- Software Architecture",
 			"badge": "10:30 - 11:30",
-			"date": "January/7/2022",
+			"date": "January/14/2022",
 			"type": "event"
 		}
 	]
